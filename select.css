@@ -1,0 +1,59 @@
+.custom-element-wrapper,
+.custom-element-label,
+.custom-element-options,
+.custom-element-option {
+    box-sizing: border-box;
+}
+
+.custom-element-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.custom-element-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    border: 1px solid black;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+.custom-element-label::after {
+    content: "";
+    border: 6px solid transparent;
+    border-top: 6px solid black;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.custom-element-options {
+    display: none;
+    position: absolute;
+    max-height: 200px;
+    overflow-y: scroll;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    border-top: none;
+    cursor: pointer;
+}
+
+.custom-element-option {
+    padding: 0.25rem 0.5rem;
+}
+
+.custom-element-option:hover {
+    background: hsl(200, 100%, 70%);
+}
+
+.custom-element-option.selected {
+    background: hsl(200, 100%, 50%);
+}
+
+.custom-element-options.show {
+    display: block;
+}
